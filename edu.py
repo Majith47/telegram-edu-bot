@@ -6,9 +6,9 @@ from telegram import Bot
 import openai
 
 # ====== CONFIG ======
-TELEGRAM_TOKEN = os.getenv("8549345538:AAE4tMbvhKeidaFB2g2KGSmwX84EFu3FNDg", "உங்கள்_BOT_TOKEN")
-CHAT_ID = os.getenv("@EduContentBot2025_bot", "@yourgroupusername")
-OPENAI_API_KEY = os.getenv("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", "உங்கள்_OPENAI_API_KEY")
+TELEGRAM_TOKEN = os.getenv("8549345538:AAE4tMbvhKeidaFB2g2KGSmwX84EFu3FNDg")
+CHAT_ID = os.getenv("@EduContentBot2025_bot")
+OPENAI_API_KEY = os.getenv("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")
 RSS_FEED_URL = os.getenv("RSS_FEED_URL", "https://example.com/rss")
 
 # Initialize Telegram and OpenAI
@@ -67,3 +67,4 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(10)
+
