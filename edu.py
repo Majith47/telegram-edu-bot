@@ -1,4 +1,3 @@
-import os
 import requests
 import schedule
 import time
@@ -6,10 +5,12 @@ from telegram import Bot
 import openai
 
 # ====== CONFIG ======
-TELEGRAM_TOKEN = os.getenv("8549345538:AAE4tMbvhKeidaFB2g2KGSmwX84EFu3FNDg")
-CHAT_ID = os.getenv("@EduContentBot2025_bot")
-OPENAI_API_KEY = os.getenv("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")
-RSS_FEED_URL = os.getenv("RSS_FEED_URL", "https://example.com/rss")
+TELEGRAM_TOKEN = "8549345538:AAE4tMbvhKeidaFB2g2KGSmwX84EFu3FNDg"
+CHAT_ID = "@EduContentBot2025_bot"
+OPENAI_API_KEY = "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"
+
+# Set RSS feed URL directly
+RSS_FEED_URL = "https://rsshub.app/instagram/user/mr.wiz73"  # <-- change to your feed URL
 
 # Initialize Telegram and OpenAI
 bot = Bot(token=TELEGRAM_TOKEN)
@@ -67,4 +68,3 @@ if __name__ == "__main__":
     while True:
         schedule.run_pending()
         time.sleep(10)
-
